@@ -13,6 +13,9 @@ description  = """
     This crate defines common data structures that can be reused by different IBC implementations or ecosystem tooling.
 """
 
+[features]
+std = []
+
 [package.metadata.docs.rs]
 all-features = true
 
@@ -20,5 +23,5 @@ all-features = true
 
 [dependencies]
 anyhow = { version = "1", default-features = false }
-prost = { version = "0.13.3", default-features = false }
+prost = { version = "0.14.3", default-features = false }
 bytes = { version = "1.2.1", default-features = false }
