@@ -88,15 +88,15 @@ scale-info = { version = "2.1.2", default-features = false, features = ["derive"
 anyhow = { version = "1", default-features = false }
 
 [dependencies.tendermint]
-version = "0.40.3"
+git = "https://github.com/permissionlessweb/tendermint-rs"
 default-features = false
 
 [dependencies.tendermint-proto]
-version = "0.40.3"
+git = "https://github.com/permissionlessweb/tendermint-rs"
 default-features = false
 
 [dependencies.tendermint-testgen]
-version = "0.40.3"
+git = "https://github.com/permissionlessweb/tendermint-rs"
 optional = true
 default-features = false
 
