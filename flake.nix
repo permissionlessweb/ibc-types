@@ -24,7 +24,7 @@
           # Set up for Rust builds, use the stable Rust toolchain
           overlays = [ (import rust-overlay) ];
           pkgs = import nixpkgs { inherit system overlays; };
-          rustToolchain = pkgs.rust-bin.stable."1.78.0".default;
+          rustToolchain = pkgs.rust-bin.stable."1.88.0".default;
           craneLib = (crane.mkLib pkgs).overrideToolchain rustToolchain;
           src = craneLib.cleanCargoSource (craneLib.path ./.);
           # Important environment variables so that the build can find the necessary libraries

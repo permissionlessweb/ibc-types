@@ -60,14 +60,14 @@ ibc-types-domain-type = { version = "0.16.0", path = "../ibc-types-domain-type",
 ibc-types-identifier = { version = "0.16.0", path = "../ibc-types-identifier", default-features = false }
 ibc-types-timestamp = { version = "0.16.0", path = "../ibc-types-timestamp", default-features = false }
 # Proto definitions for all IBC-related interfaces, e.g., connections or channels.
-ibc-proto = { default-features = false, git = "https://github.com/permissionlessweb/ibc-proto-rs" }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "main", default-features = false }
 ## for borsh encode or decode
 borsh = {version = "0.10.0", default-features = false, optional = true }
 bytes = { version = "1.2.1", default-features = false }
 cfg-if = { version = "1.0.0", optional = true }
 derive_more = { version = "0.99.17", default-features = false, features = ["from", "into", "display"] }
 displaydoc = { version = "0.2", default-features = false }
-ics23 = { git = "https://github.com/permissionlessweb/ics23", default-features = false, features = ["host-functions"] }
+ics23 = { git = "https://github.com/permissionlessweb/ics23", branch = "stable", features = ["host-functions"], default-features = false }
 
 num-traits = { version = "0.2.15", default-features = false }
 ## for codec encode or decode
@@ -87,16 +87,11 @@ tracing = { version = "0.1.36", default-features = false }
 scale-info = { version = "2.1.2", default-features = false, features = ["derive"], optional = true }
 anyhow = { version = "1", default-features = false }
 
-[dependencies.tendermint]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
-[dependencies.tendermint-proto]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
 [dependencies.tendermint-testgen]
 git = "https://github.com/permissionlessweb/tendermint-rs"
+branch = "main"
 optional = true
 default-features = false
 

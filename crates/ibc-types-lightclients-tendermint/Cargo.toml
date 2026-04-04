@@ -64,8 +64,8 @@ ibc-types-core-connection = { version = "0.16.0", path = "../ibc-types-core-conn
 ibc-types-core-commitment = { version = "0.16.0", path = "../ibc-types-core-commitment", default-features = false }
 
 # Proto definitions for all IBC-related interfaces, e.g., connections or channels.
-ibc-proto = { default-features = false, git = "https://github.com/permissionlessweb/ibc-proto-rs" }
-ics23 = { git = "https://github.com/permissionlessweb/ics23", default-features = false, features = ["host-functions"] }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "main", default-features = false }
+ics23 = { git = "https://github.com/permissionlessweb/ics23", branch = "stable", features = ["host-functions"], default-features = false }
 time = { version = "0.3", default-features = false }
 serde_derive = { version = "1.0.104", default-features = false, optional = true }
 serde = { version = "1.0", default-features = false, optional = true }
@@ -92,21 +92,17 @@ parking_lot = { version = "0.12.1", default-features = false, optional = true }
 cfg-if = { version = "1.0.0", optional = true }
 anyhow = { version = "1", default-features = false }
 
-[dependencies.tendermint]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
-[dependencies.tendermint-proto]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
 [dependencies.tendermint-light-client-verifier]
 git = "https://github.com/permissionlessweb/tendermint-rs"
+branch = "main"
 default-features = false
 features = ["rust-crypto"]
 
 [dependencies.tendermint-testgen]
 git = "https://github.com/permissionlessweb/tendermint-rs"
+branch = "main"
 optional = true
 default-features = false
 
@@ -115,8 +111,8 @@ env_logger = "0.10.0"
 rstest = "0.15.0"
 tracing-subscriber = { version = "0.3.14", features = ["fmt", "env-filter", "json"]}
 test-log = { version = "0.2.10", features = ["trace"] }
-tendermint-rpc = { git = "https://github.com/permissionlessweb/tendermint-rs", features = ["http-client", "websocket-client"] }
-tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs" } # Needed for generating (synthetic) light blocks.
+tendermint-rpc = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", features = ["http-client", "websocket-client"] }
+tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main" } # Needed for generating (synthetic) light blocks.
 parking_lot = { version = "0.12.1" }
 cfg-if = { version = "1.0.0" }
 ibc-types-core-client = { version = "0.16.0", path = "../ibc-types-core-client", features = ["mocks"] }

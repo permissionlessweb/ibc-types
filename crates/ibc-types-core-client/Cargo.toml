@@ -54,11 +54,11 @@ bytes = { version = "1.2.1", default-features = false }
 cfg-if = { version = "1.0.0", optional = true }
 derive_more = { version = "0.99.17", default-features = false, features = ["from", "into", "display"] }
 displaydoc = { version = "0.2", default-features = false }
-ibc-proto = { default-features = false, git = "https://github.com/permissionlessweb/ibc-proto-rs" }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "main", default-features = false }
 ibc-types-domain-type = { version = "0.16.0", path = "../ibc-types-domain-type", default-features = false }
 ibc-types-identifier = { version = "0.16.0", path = "../ibc-types-identifier", default-features = false }
 ibc-types-timestamp = { version = "0.16.0", path = "../ibc-types-timestamp", default-features = false }
-ics23 = { git = "https://github.com/permissionlessweb/ics23", default-features = false, features = ["host-functions"] }
+ics23 = { git = "https://github.com/permissionlessweb/ics23", branch = "stable", features = ["host-functions"], default-features = false }
 num-traits = { version = "0.2.15", default-features = false }
 parity-scale-codec = { version = "3.0.0", default-features = false, features = ["full"], optional = true }
 prost = { version = "0.14.3", default-features = false }
@@ -71,14 +71,8 @@ subtle-encoding = { version = "0.5", default-features = false }
 time = { version = "0.3", default-features = false }
 anyhow = { version = "1", default-features = false }
 
-[dependencies.tendermint]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
-[dependencies.tendermint-proto]
-git = "https://github.com/permissionlessweb/tendermint-rs"
-default-features = false
-
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "main", default-features = false }
 [dev-dependencies]
 cfg-if = { version = "1.0.0" }
 
