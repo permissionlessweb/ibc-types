@@ -5,14 +5,11 @@ edition = "2021"
 resolver = "2"
 
 [dependencies]
-ibc-types = { path = "../../crates/ibc-types", default-features = false, features = [
-  "serde",
-  "mocks-no-std",
-] }
-ibc-proto = { version = "0.42.2", default-features = false }
-tendermint = { version = "0.34.0", default-features = false }
-tendermint-proto = { version = "0.34.0", default-features = false }
-tendermint-light-client-verifier = { version = "0.34.0", default-features = false, features = ["rust-crypto"] }
+ibc-types = { path = "../../crates/ibc-types", default-features = false, features = ["mocks-no-std", "serde"] }
+ibc-proto = { path = "../../../ibc-proto-rs", default-features = false }
+tendermint = { path = "../../../tendermint-rs/tendermint", default-features = false }
+tendermint-proto = { path = "../../../tendermint-rs/proto", default-features = false }
+tendermint-light-client-verifier = { path = "../../../tendermint-rs/light-client-verifier", default-features = false, features = ["rust-crypto"] }
 
 sp-core = { version = "17.0.0", default-features = false, optional = true }
 sp-io = { version = "18.0.0", default-features = false, optional = true }
