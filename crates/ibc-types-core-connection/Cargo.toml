@@ -61,8 +61,8 @@ bytes = { version = "1.2.1", default-features = false }
 cfg-if = { version = "1.0.0", optional = true }
 derive_more = { version = "0.99.17", default-features = false, features = ["from", "into", "display"] }
 displaydoc = { version = "0.2", default-features = false }
-ibc-proto = { path = "../../../ibc-proto-rs", default-features = false }
-ics23 = { path = "../../../ics23/rust", default-features = false, features = ["host-functions"] }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "zk-mvp", default-features = false }
+ics23 = { git = "https://github.com/permissionlessweb/ics23", branch = "zk-mvp", default-features = false, features = ["host-functions"] }
 num-traits = { version = "0.2.15", default-features = false }
 parity-scale-codec = { version = "3.0.0", default-features = false, features = ["full"], optional = true }
 parking_lot = { version = "0.12.1", default-features = false, optional = true }
@@ -77,9 +77,9 @@ subtle-encoding = { version = "0.5", default-features = false }
 time = { version = "0.3", default-features = false }
 anyhow = { version = "1", default-features = false }
 
-tendermint = { path = "../../../tendermint-rs/tendermint", default-features = false }
-tendermint-proto = { path = "../../../tendermint-rs/proto", default-features = false }
-tendermint-testgen = { path = "../../../tendermint-rs/testgen", default-features = false, optional = true }
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false, optional = true }
 [dev-dependencies]
 env_logger = "0.10.0"
 tracing-subscriber = { version = "0.3.14", features = ["fmt", "env-filter", "json"]}

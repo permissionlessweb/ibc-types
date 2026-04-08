@@ -64,8 +64,8 @@ ibc-types-core-connection = { version = "0.16.0", path = "../ibc-types-core-conn
 ibc-types-core-commitment = { version = "0.16.0", path = "../ibc-types-core-commitment", default-features = false }
 
 # Proto definitions for all IBC-related interfaces, e.g., connections or channels.
-ibc-proto = { path = "../../../ibc-proto-rs", default-features = false }
-ics23 = { path = "../../../ics23/rust", default-features = false, features = ["host-functions"] }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "zk-mvp", default-features = false }
+ics23 = { git = "https://github.com/permissionlessweb/ics23", branch = "zk-mvp", default-features = false, features = ["host-functions"] }
 time = { version = "0.3", default-features = false }
 serde_derive = { version = "1.0.104", default-features = false, optional = true }
 serde = { version = "1.0", default-features = false, optional = true }
@@ -92,17 +92,17 @@ parking_lot = { version = "0.12.1", default-features = false, optional = true }
 cfg-if = { version = "1.0.0", optional = true }
 anyhow = { version = "1", default-features = false }
 
-tendermint = { path = "../../../tendermint-rs/tendermint", default-features = false }
-tendermint-proto = { path = "../../../tendermint-rs/proto", default-features = false }
-tendermint-light-client-verifier = { path = "../../../tendermint-rs/light-client-verifier", default-features = false, features = ["rust-crypto"] }
-tendermint-testgen = { path = "../../../tendermint-rs/testgen", default-features = false, optional = true }
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-light-client-verifier = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false, features = ["rust-crypto"] }
+tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false, optional = true }
 [dev-dependencies]
 env_logger = "0.10.0"
 rstest = "0.15.0"
 tracing-subscriber = { version = "0.3.14", features = ["fmt", "env-filter", "json"]}
 test-log = { version = "0.2.10", features = ["trace"] }
-tendermint-rpc = { path = "../../../tendermint-rs/rpc", features = ["http-client", "websocket-client"] }
-tendermint-testgen = { path = "../../../tendermint-rs/testgen" }
+tendermint-rpc = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", features = ["http-client", "websocket-client"] }
+tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp" }
 parking_lot = { version = "0.12.1" }
 cfg-if = { version = "1.0.0" }
 ibc-types-core-client = { version = "0.16.0", path = "../ibc-types-core-client", features = ["mocks"] }

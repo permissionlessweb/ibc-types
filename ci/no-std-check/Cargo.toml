@@ -5,11 +5,11 @@ edition = "2021"
 resolver = "2"
 
 [dependencies]
-ibc-types = { path = "../../crates/ibc-types", default-features = false, features = ["mocks-no-std", "serde"] }
-ibc-proto = { path = "../../../ibc-proto-rs", default-features = false }
-tendermint = { path = "../../../tendermint-rs/tendermint", default-features = false }
-tendermint-proto = { path = "../../../tendermint-rs/proto", default-features = false }
-tendermint-light-client-verifier = { path = "../../../tendermint-rs/light-client-verifier", default-features = false, features = ["rust-crypto"] }
+ibc-types = { git = "https://github.com/permissionlessweb/ibc-types", branch = "zk-mvp", default-features = false, features = ["mocks-no-std", "serde"] }
+ibc-proto = { git = "https://github.com/permissionlessweb/ibc-proto-rs", branch = "zk-mvp", default-features = false }
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-light-client-verifier = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false, features = ["rust-crypto"] }
 
 sp-core = { version = "17.0.0", default-features = false, optional = true }
 sp-io = { version = "18.0.0", default-features = false, optional = true }

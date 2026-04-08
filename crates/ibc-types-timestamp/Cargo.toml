@@ -55,9 +55,9 @@ serde_derive = { version = "1.0.104", default-features = false, optional = true 
 serde_json = { version = "1", default-features = false, optional = true }
 subtle-encoding = { version = "0.5", default-features = false }
 time = { version = "0.3", default-features = false }
-tendermint = { path = "../../../tendermint-rs/tendermint", default-features = false }
-tendermint-proto = { path = "../../../tendermint-rs/proto", default-features = false }
-tendermint-testgen = { path = "../../../tendermint-rs/testgen", default-features = false, optional = true }
+tendermint = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-proto = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false }
+tendermint-testgen = { git = "https://github.com/permissionlessweb/tendermint-rs", branch = "zk-mvp", default-features = false, optional = true }
 
 [dev-dependencies]
 cfg-if = { version = "1.0.0" }
